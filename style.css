@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
 /* Configurações gerais e paleta de cores */
 :root {
   --cor-fundo: #fff5f7;          /* Rosa pastel bem suave para o fundo */
@@ -8,17 +10,18 @@
   --cor-branca: #ffffff;
 }
 
-* .zeyada-regular {
-  font-family: "Zeyada", cursive;
-  font-weight: 400;
-  font-style: normal;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zeyada', cursive; /* Fonte manuscrita personalizada */
 }
-
 
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   padding: 20px;
+  font-size: 1.2rem; /* Aumentado ligeiramente para destacar a fonte manuscrita */
 }
 
 /* Cabeçalho */
@@ -32,12 +35,12 @@ body {
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--cor-destaque);
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-top: 5px;
 }
@@ -57,7 +60,7 @@ body {
 }
 
 .sidebar-title {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: var(--cor-destaque);
   margin-bottom: 5px;
 }
@@ -72,18 +75,18 @@ body {
 }
 
 .card h3 {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   margin-bottom: 8px;
 }
 
 .card-value {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--cor-destaque);
 }
 
 .card-status {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   display: block;
   margin-top: 4px;
 }
@@ -110,12 +113,14 @@ table {
 th, td {
   padding: 12px 15px;
   border-bottom: 1px solid #f0f0f0;
+  font-size: 1.2rem;
 }
 
 th {
   background-color: var(--cor-tabela-cabecalho);
   color: var(--cor-destaque);
   font-weight: bold;
+  font-size: 1.3rem;
 }
 
 tr:hover {
