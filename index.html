@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletim Digital - 9º Ano</title>
+  <!-- Link para o nosso arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    meu boletim
+
+  <!-- Cabeçalho principal da página -->
+  <header class="header">
+    <h1>Boletim Digital</h1>
+    <p class="subtitle">9º Ano — Estudante Exemplo</p>
+  </header>
+
+  <!-- Container principal dividindo o conteúdo em barra lateral e área principal -->
+  <div class="main-container">
+    
+    <!-- Painel Lateral: Cards de resumo empilhados -->
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Resumo Geral</h2>
+      
+      <div class="card">
+        <h3>Média Geral</h3>
+        <p id="card-media" class="card-value">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Total de Faltas</h3>
+        <p id="card-faltas" class="card-value">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Bom Desempenho</h3>
+        <p id="card-bom-desempenho" class="card-value">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Atenção</h3>
+        <p id="card-atencao" class="card-value">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Frequência</h3>
+        <p class="card-value">92%</p>
+        <span class="card-status">Frequência adequada</span>
+      </div>
+    </aside>
+
+    <!-- Área Principal: Tabela de Notas -->
+    <main class="content">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <!-- O corpo da tabela será preenchido automaticamente pelo JavaScript -->
+          <tbody id="tabela-boletim">
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Link para o nosso código JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
