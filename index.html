@@ -9,68 +9,109 @@
 </head>
 <body>
 
-  <!-- Cabeçalho principal da página -->
-  <header class="header">
-    <h1>Boletim Digital</h1>
-    <p class="subtitle">9º Ano — Estudante Exemplo</p>
-  </header>
-
-  <!-- Container principal dividindo o conteúdo em barra lateral e área principal -->
-  <div class="main-container">
-    
-    <!-- Painel Lateral: Cards de resumo empilhados -->
-    <aside class="sidebar">
-      <h2 class="sidebar-title">Resumo Geral</h2>
+  <!-- Área de Acesso por PIN -->
+  <div id="area-login" class="login-container">
+    <div class="login-box">
+      <h2>Acesso ao Boletim</h2>
+      <p class="login-info">9º Ano — Turma 9B — Chamada nº 19</p>
       
-      <div class="card">
-        <h3>Média Geral</h3>
-        <p id="card-media" class="card-value">—</p>
+      <div class="input-group">
+        <label for="pin-input">Digite seu PIN:</label>
+        <input type="password" id="pin-input" placeholder="****" maxlength="20">
       </div>
+      
+      <button id="btn-entrar" type="button">Entrar</button>
+      <div id="login-mensagem" class="mensagem-status"></div>
+    </div>
+  </div>
 
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-faltas" class="card-value">—</p>
+  <!-- Conteúdo Principal do Boletim (Escondido antes do login) -->
+  <div id="conteudo-boletim" style="display: none;">
+
+    <!-- Cabeçalho principal da página -->
+    <header class="header">
+      <h1>Boletim Digital</h1>
+      <p class="subtitle">9º Ano — Turma 9B — Chamada nº 19 — Estudante Exemplo</p>
+      <div class="header-actions">
+        <button id="btn-editar" type="button">Alterar dados</button>
       </div>
+    </header>
 
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-desempenho" class="card-value">—</p>
-      </div>
+    <!-- Área de Status / Mensagens globais -->
+    <div id="status-mensagem" class="mensagem-status"></div>
 
-      <div class="card">
-        <h3>Atenção</h3>
-        <p id="card-atencao" class="card-value">—</p>
-      </div>
+    <!-- Container principal dividindo o conteúdo em barra lateral e área principal -->
+    <div class="main-container">
+      
+      <!-- Painel Lateral: Cards de resumo empilhados -->
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Resumo Geral</h2>
+        
+        <div class="card">
+          <h3>Média Geral</h3>
+          <p id="card-media" class="card-value">—</p>
+        </div>
 
-      <div class="card">
-        <h3>Frequência</h3>
-        <p class="card-value">92%</p>
-        <span class="card-status">Frequência adequada</span>
-      </div>
-    </aside>
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas" class="card-value">—</p>
+        </div>
 
-    <!-- Área Principal: Tabela de Notas -->
-    <main class="content">
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <!-- O corpo da tabela será preenchido automaticamente pelo JavaScript -->
-          <tbody id="tabela-boletim">
-          </tbody>
-        </table>
-      </div>
-    </main>
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho" class="card-value">—</p>
+        </div>
 
+        <div class="card">
+          <h3>Atenção</h3>
+          <p id="card-atencao" class="card-value">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Frequência</h3>
+          <p class="card-value">92%</p>
+          <span class="card-status">Frequência adequada</span>
+        </div>
+      </aside>
+
+      <!-- Área Principal: Tabela de Notas -->
+      <main class="content">
+        <!-- Formulário de Edição (Escondido inicialmente) -->
+        <div id="area-edicao" class="edicao-container" style="display: none;">
+          <h2>Editar Notas e Faltas</h2>
+          <div id="erro-edicao" class="mensagem-status status-erro"></div>
+          
+          <form id="form-edicao">
+            <div id="lista-edicao-disciplinas"></div>
+            <div class="edicao-botoes">
+              <button id="btn-salvar" type="button">Salvar alterações</button>
+              <button id="btn-cancelar" type="button">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Visualização da Tabela -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <!-- O corpo da tabela será preenchido automaticamente pelo JavaScript -->
+            <tbody id="tabela-boletim">
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+    </div>
   </div>
 
   <!-- Link para o nosso código JavaScript -->
