@@ -40,6 +40,33 @@
     <!-- Área de Status / Mensagens globais -->
     <div id="status-mensagem" class="mensagem-status"></div>
 
+    <!-- Área dos Gráficos Interativos (Chart.js) -->
+    <section class="area-graficos">
+      
+      <article class="grafico-card">
+        <h2>Média por disciplina</h2>
+        <div class="grafico-container">
+          <canvas id="graficoMediasDisciplinas"></canvas>
+        </div>
+      </article>
+
+      <article class="grafico-card">
+        <h2>Evolução da média geral</h2>
+        <div class="grafico-container">
+          <canvas id="graficoEvolucaoTrimestres"></canvas>
+        </div>
+      </article>
+
+      <article id="cardFaltasTrimestres" class="grafico-card">
+        <h2>Faltas por trimestre</h2>
+        <div id="estadoFaltas"></div>
+        <div class="grafico-container">
+          <canvas id="graficoFaltasTrimestres"></canvas>
+        </div>
+      </article>
+
+    </section>
+
     <!-- Container principal dividindo o conteúdo em barra lateral e área principal -->
     <div class="main-container">
       
@@ -114,6 +141,8 @@
     </div>
   </div>
 
+  <!-- Biblioteca Chart.js para os gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Link para o nosso código JavaScript -->
   <script src="script.js"></script>
 </body>
