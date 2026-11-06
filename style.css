@@ -45,6 +45,10 @@ body {
   margin-top: 5px;
 }
 
+.header-actions {
+  margin-top: 15px;
+}
+
 /* Layout Principal: Coluna Lateral + Conteúdo */
 .main-container {
   display: flex;
@@ -152,4 +156,150 @@ tr:hover {
   .sidebar {
     width: 280px;
   }
+}
+
+/* --- NOVOS ESTILOS ADICIONADOS PARA A API E ACESSO --- */
+
+/* Tela de Login / PIN */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.login-box {
+  background-color: var(--cor-cards);
+  padding: 30px;
+  border-radius: 16px;
+  border: 2px solid var(--cor-destaque);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: var(--cor-destaque);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.login-info {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.item-edicao input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--cor-destaque);
+  background-color: var(--cor-branca);
+  font-size: 1.2rem;
+  outline: none;
+}
+
+/* Botões */
+button {
+  background-color: var(--cor-destaque);
+  color: var(--cor-branca);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#btn-cancelar {
+  background-color: #757575;
+}
+
+/* Mensagens de status */
+.mensagem-status {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status-erro {
+  color: #c62828;
+}
+
+.status-sucesso {
+  color: #2e7d32;
+}
+
+.status-info {
+  color: var(--cor-destaque);
+}
+
+/* Área de Edição */
+.edicao-container {
+  background-color: var(--cor-branca);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--cor-destaque);
+  margin-bottom: 25px;
+}
+
+.edicao-container h2 {
+  color: var(--cor-destaque);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.item-edicao {
+  background-color: var(--cor-fundo);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--cor-destaque);
+}
+
+.item-edicao h4 {
+  font-size: 1.3rem;
+  color: var(--cor-destaque);
+  margin-bottom: 8px;
+}
+
+.campos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+.campo-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-box label {
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.edicao-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
